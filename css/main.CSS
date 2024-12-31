@@ -1,0 +1,110 @@
+/* 通用樣式 */
+body {
+    background-color: rgb(16, 15, 15);
+    margin: 0;
+    color: rgb(50, 46, 46);
+    font-family: Arial, sans-serif;
+}
+
+/* 標題樣式 */
+h1 {
+    margin-left: 58px;
+    color: rgb(51, 49, 49);
+    font-size: 36px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* 圖片容器 */
+.go-play {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* 調整圖片間距 */
+}
+
+/* 每張圖片設置統一寬度並保持等比縮放 */
+.go-play img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;  /* 保持比例裁切 */
+    transition: transform 0.3s ease; /* 添加圖片縮放效果 */
+}
+
+.go-play img:hover {
+    transform: scale(1.05); /* 鼠標懸停時圖片輕微放大 */
+}
+
+/* 頂部導航欄 */
+#top {
+    background-color: #e8e8e8;  /* 設定整個選單的背景顏色為深灰色 */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(11, 11, 11, 0.3);
+    z-index: 100;
+}
+
+#top ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#top ul li {
+    display: inline-block;
+}
+
+#top ul li a {
+    color: rgb(241, 238, 238);  /* 改為白色文字 */
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: rgb(95, 101, 101);
+}
+
+#top ul li a:hover {
+    background-color: rgb(231, 230, 226); /* 鼠標懸停時背景顏色 */
+    color: black;
+}
+
+#top ul li.active a {
+    background-color: rgb(203, 208, 212);
+    color: rgb(67, 64, 64);
+}
+
+/* 下拉選單內容 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #bfb9b9;  /* 下拉選單背景顏色 */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* 下拉選單項目 */
+.dropdown-content li {
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: rgb(200, 197, 197);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    color: rgb(207, 199, 81);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

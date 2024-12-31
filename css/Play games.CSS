@@ -1,0 +1,113 @@
+/* 通用樣式 */
+body {
+    background-color: rgb(16, 15, 15);
+    margin: 0;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* 標題樣式 */
+h1 {
+    padding-top: 5%;
+    margin-left: 58px;
+    color: white;
+    font-size: 36px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* 圖片容器 */
+.games {
+    padding-top: 0%;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* 調整圖片間距 */
+}
+
+/* 每張圖片設置統一寬度並保持等比縮放 */
+.games img {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;  /* 保持比例裁切 */
+    transition: transform 0.3s ease; /* 添加圖片縮放效果 */
+}
+
+.games img:hover {
+    transform: scale(1.05); /* 鼠標懸停時圖片輕微放大 */
+}
+
+/* 頂部導航欄 */
+#top {
+    background-color: rgba(242, 242, 244, 0.726);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+#top ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+#top ul li {
+    display: inline-block;
+}
+
+#top ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#top ul li a:hover {
+    background-color: rgb(207, 199, 81);
+    color: black;
+}
+
+/* 更改 active 狀態的背景顏色 */
+#top ul li.active a {
+    background-color: rgb(35, 40, 55);  /* 新的背景色，根據遊戲主題調整 */
+    color: white; /* 改為白色文字 */
+}
+
+/* 下拉選單內容 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;  /* 改為深灰色 */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* 下拉選單項目 */
+.dropdown-content li {
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: rgb(27, 25, 25);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    color: rgb(207, 199, 81);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    margin-top: 41.6px;
+}
+h1 {
+    margin-left: 58px;
+    color: white;
+}
+#top {
+    background-color: rgba(19, 19, 20, 0.726);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+}
+#top ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+#top ul li {
+    display: inline-block;
+}
+#top ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 40px;
+}
+#top ul li a:hover {
+    color: rgb(207, 199, 81);
+}
+#top ul li.active a {
+    background-color: rgb(224, 231, 238);
+}
+
+/* 設置 .video 容器和影片樣式 */
+.video {
+    display: flex;
+    justify-content: center;  /* 水平置中影片 */
+    align-items: center;  /* 垂直置中影片 */
+    margin: 20px auto;  /* 影片容器置中 */
+}
+
+.video video {
+    max-width: 960px;  /* 設置影片最大寬度 */
+    max-height: 540px;  /* 設置影片最大高度 */
+    width: 100%;  /* 使影片寬度自適應容器 */
+    height: auto;  /* 高度自動調整以保持比例 */
+    border-radius: 10px;  /* 圓角 */
+}
